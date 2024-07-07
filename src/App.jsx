@@ -8,6 +8,7 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Landingpage from './pages/Landingpage.jsx';
 import AOS from "aos";
 import "aos/dist/aos.css"
+import Vote from './pages/vote.jsx';
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
@@ -45,16 +46,11 @@ const App = () => {
           <Route path="/" element={<Landingpage></Landingpage>}></Route>
           <Route path="/proposal" element={<Proposalpage></Proposalpage>}></Route>
           <Route path="/aboutus" element={<Aboutus></Aboutus>}></Route>
-          
+          <Route path="/newProposal" element={<AddCards></AddCards>}></Route>
+          <Route path="/vote" element={<Vote></Vote>}></Route>          
         </Routes>
       </BrowserRouter>
-          </div>
-    
-    
-    
-    
-    
-      
+          </div>   
   );
 };
 

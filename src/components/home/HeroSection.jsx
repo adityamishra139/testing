@@ -1,6 +1,8 @@
 import vid from '../../assets/img/3.mp4';
 import Aos from 'aos';
+import { useNavigate } from 'react-router-dom';
 const HeroSection = () => {
+    const navigate=useNavigate();
     const settings = {
         dots: true,
         arrows: true,
@@ -13,6 +15,9 @@ const HeroSection = () => {
         pauseOnHover: true,
         pauseOnFocus: true,
       };
+      const handleClick=()=>{
+        navigate('/proposal')
+      }
     return (
         <section {...settings}
         
@@ -38,7 +43,7 @@ const HeroSection = () => {
                     className="bg-white text-black py-3 px-6 rounded-full transform transition duration-500 hover:bg-gray-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
                         Browse on the Web3 Store
                     </button>  */}
-                    <button className="bg-white text-black py-3 px-6 rounded-full transform transition duration-500 hover:bg-gray-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white translate-y-5">
+                    <button onClick={handleClick} className="bg-white text-black py-3 px-6 rounded-full transform transition duration-500 hover:bg-gray-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white translate-y-5">
                         Enter The Voting System
                     </button>
                 </div>

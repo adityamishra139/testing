@@ -1,6 +1,10 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const NavbarHome = () => {
+    const navigate=useNavigate();
+    const handleClick = ()=>{
+        navigate('/newProposal')
+    }
     return (
         <nav className="flex justify-between items-center bg-black p-4 shadow-lg">
             <div className="text-2xl font-bold text-white transition-transform hover:scale-105 mx-12">Voter</div>
@@ -19,7 +23,7 @@ const NavbarHome = () => {
                 </li>
             </ul>
             <div className="flex items-center space-x-4">
-                <button className="font-bold tracking-wider border-none rounded-full bg-white text-green-600 py-3 px-6 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl transform hover:scale-105 active:scale-95">
+                <button onClick={handleClick} className="font-bold tracking-wider border-none rounded-full bg-white text-green-600 py-3 px-6 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl transform hover:scale-105 active:scale-95">
                    Add Proposal
                 </button>
                 {/* <div className="relative">

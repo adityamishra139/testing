@@ -1,6 +1,10 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
  const Card = () => {
+  const navigate=useNavigate();
+  const handleClick = ()=>{
+    navigate('/vote')
+  }
   return (
     <div className="bg-gray-900 text-white py-10 min-h-screen flex items-center justify-center">
       <div className="bg-gray-800 max-w-2xl w-full mx-4 rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-duration="1000">
@@ -32,7 +36,7 @@ import React from 'react';
           </section>
         </main>
         <footer className="text-center" data-aos="fade-up" data-aos-duration="1000">
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-md text-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600 flex items-start">
+          <button onClick={handleClick} className="bg-blue-500 text-white py-2 px-6 rounded-md text-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600 flex items-start">
             Vote
           </button>
         </footer>
