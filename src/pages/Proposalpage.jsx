@@ -4,7 +4,7 @@ import NavbarHome from '../components/home/NavbarHome'
 import Footer from '../components/home/Footer'
 const Proposalpage = () => {
   return (
-    <div>
+    <div className='bg-gray-900'>
         <NavbarHome></NavbarHome>
         <Proposals></Proposals>
         <Footer></Footer>

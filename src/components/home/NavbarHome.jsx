@@ -1,4 +1,6 @@
 import React from 'react';
+import LOGO from '../../assets/img/netselector.png';
+
 import { useNavigate } from 'react-router-dom';
 const NavbarHome = () => {
     const navigate=useNavigate();
@@ -7,7 +9,9 @@ const NavbarHome = () => {
     }
     return (
         <nav className="flex justify-between items-center bg-black p-4 shadow-lg">
-            <div className="text-2xl font-bold text-white transition-transform hover:scale-105 mx-12">Voter</div>
+        <div className="flex items-center">
+            <img src={LOGO} alt="Logo" className="h-24 w-auto mr-2 transition-transform duration-300 transform hover:scale-110" />
+        </div>
             <ul className="flex list-none">
                 <li className="mx-4 navbar-list-item">
                     <a href="/" className="text-white text-lg no-underline hover:text-gray-300 transition-transform duration-300 transform hover:scale-110">Home</a>
@@ -15,9 +19,9 @@ const NavbarHome = () => {
                 <li className="mx-4 navbar-list-item">
                     <a href="/proposal" className="text-white text-lg no-underline hover:text-gray-300 transition-transform duration-300 transform hover:scale-110">Proposal</a>
                 </li>
-                <li className="mx-4 navbar-list-item">
+                {/* <li className="mx-4 navbar-list-item">
                     <a href="#updates" className="text-white text-lg no-underline hover:text-gray-300 transition-transform duration-300 transform hover:scale-110">Updates</a>
-                </li>
+                </li> */}
                 <li className="mx-4 navbar-list-item">
                     <a href="/aboutus" className="text-white text-lg no-underline hover:text-gray-300 transition-transform duration-300 transform hover:scale-110">About Us</a>
                 </li>
